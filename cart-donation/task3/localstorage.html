@@ -1,0 +1,144 @@
+<!-- with localstorage -->
+<!DOCTYPE html>
+<head>
+    <title>Cart LocalStorage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .t_a_c{text-align: center;}
+        td { text-align :center}
+        .row{margin-left: 0px;margin-right: 0px;}
+         table { border-collapse: collapse;width:100%;}
+        thead>tr>th{text-align: center; padding:5px 10px;background-color:#18aac4; color:#fff;font-size: 20px;}
+        tbody>tr:hover{background-color:#bfe9f1;cursor: pointer;} 
+        tbody>tr>td{padding:5px 10px;font-weight:bold;}  
+        .btn{background-color: #18aac4;border: 1px solid #18aac4;color:#fff;}
+        .btn:visited{background-color: #18aac4;border: 1px solid #18aac4;}
+        .btn:hover{background-color: #18aac4;border: 1px solid #18aac4;}
+        .m_t_20{margin-top: 18px;}
+        .container{width:100%;padding-right:5px;padding-left: 5px;} 
+        .pad_l_r0{padding-left: 0px;padding-right: 0px;}
+    </style>
+    <script>
+        var cart = [];
+        var items_ids=[]
+        items_ids.push({'id':"0",'name':'Pants'});
+        items_ids.push({'id':"1",'name':'Shirts'});
+        items_ids.push({'id':"2",'name':'Track Pants'});
+        items_ids.push({'id':"3",'name':'Foot Wear'});
+        items_ids.push({'id':"4",'name':'Mobiles'});
+        items_ids.push({'id':"5",'name':'Wallets'});
+        items_ids.push({'id':"6",'name':'Watches'});
+        items_ids.push({'id':"7",'name':'LED TV'});
+        $(function () {
+            if (localStorage.cart)
+            {
+                cart = JSON.parse(localStorage.cart);
+                showCart();
+            }
+        });
+        function addToCart() {
+            var name = $("#items option:selected").text();
+            var id=$("#items option:selected").val();
+            var qty = $("#qty").val();
+            if(name=="Select product")
+            {
+                return ;
+            }
+            for (var i in cart) {
+                if(cart[i].key == id)
+                {
+                    cart[i].Qty = qty;
+                    showCart();
+                    saveCart();
+                    return;
+                }
+            }
+            var item = { key: id, Qty: qty }; 
+            cart.push(item);
+            saveCart();
+            showCart();
+        }
+        function deleteItem(index){
+            cart.splice(index,1); 
+            showCart();
+            saveCart();
+        }
+        function saveCart() {
+            if ( window.localStorage)
+            {
+                localStorage.cart = JSON.stringify(cart);
+            }
+        }
+        function showCart() {
+            if (cart.length == 0) {
+                $("#cart").css("visibility", "hidden");
+                return;
+            }
+            $("#cart").css("visibility", "visible");
+            $("#cartBody").empty();
+            for (var i in cart) {
+                var item = cart[i];
+                var ids=cart[i].key;
+                var row_no=parseInt(i)+parseInt(1);
+                var row = "<tr id='item_row'><td>"+row_no+"</td><td>"+ items_ids[ids].name + "</td><td>" +
+                           + item.Qty + "</td><td>"
+                             + "<button class='btn btn-sm'onclick='deleteItem(" + i+ ")'>Remove</button></td></tr>";
+                $("#cartBody").append(row);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <div class="row t_a_c m_t_20">
+          <p style="font-size: 25px;"><i class="fa fa-shopping-cart" style="color:black;" aria-hidden="true"></i> Cart</p>
+    </div>
+    <div class="row m_t_20">
+        <div class="col-md-6 col-sm-6 col-lg-6 pad_l_r0">
+        <select id="items" class="form-control" style="font-size: 20px; height:45px;">
+            <option value="select">Select product</option>
+            <option id="0" value="0">Pants</option>
+            <option id="1" value="1">Shirts</option>
+            <option id="2" value="2">Track Pants</option>
+            <option id="3" value="3">Foot Wear</option>    
+            <option id="4" value="4">Mobiles</option>
+            <option id="5" value="5">Wallets</option>
+            <option id="6" value="6">Watches</option>
+            <option id="7" value="7">LED TV</option>
+        </select>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 pad_l_r0">
+        <input type="text" class="form-control" style="height:45px;" id="qty" placeholder="Quantity" size="3" />
+        </div>
+     
+    </div>
+    <div class="row t_a_c m_t_20">
+    <button id="btnAdd" class="btn" onclick="addToCart()" style="font-size: 18px;"><b>Save and Add</b></button>
+    </div>
+    <div class="row m_t_20">
+        <div class="col-md-2 col-sm-2 col-lg-2 pad_l_r0"></div> 
+        <div class="col-md-8 col-sm-8 col-lg-8 pad_l_r0">
+            <table id="cart" border="1" style="visibility:hidden; width:100%">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Action</th>
+                    </tr>
+                 </thead>
+                 <tbody id="cartBody">
+
+                 </tbody>
+            </table>
+        </div>
+        <div class="col-md-2 col-sm-2 col-lg-2 pad_l_r0"></div> 
+    </div>   
+    </div> 
+</body>
+</html>
+    

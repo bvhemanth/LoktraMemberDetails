@@ -1,0 +1,160 @@
+<html>
+	<head>
+                <title>Movies</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="mov.js"></script>
+		<style>
+			#top_row
+			{
+				margin-top:20px;
+				background-image:url('https://c.stocksy.com/a/RcN300/z0/805779.jpg');
+				background-size:cover;
+				height:100px;
+			}
+			#library
+			{
+				margin-top:20px;
+				padding: 10px 10px 10px 10px;
+			}
+			img {
+				display:block;
+				margin:auto;
+			}
+			.results_title{color:#5cb85c;}
+			.row{margin-left:0px;margin-right:0px;}
+			.col_l_r0{padding-left:0px;padding-right:0px;}
+			.form-control{border-radius: 20px;}
+			.btn:visited{border-radius: 20px;}
+			.btn:focus, .btn:active:focus, .btn.active:focus {
+				outline: 0 none;
+			}
+			.fa-times-circle-o
+			{
+				color:#5cb85c;
+			}
+			.ip_search_btn
+			{
+				margin-top:37px;
+				padding-top:30px;
+			}
+			.navbar {
+				  font-family: Montserrat, sans-serif;
+				  margin-bottom: 0;
+				  background-color: #2d2d30;
+				  border: 0;
+				  font-size: 11px !important;
+				  letter-spacing: 4px;
+				  opacity: 0.9;
+			  }
+			  .navbar li a, .navbar .navbar-brand { 
+				  color: #d5d5d5 !important;
+			  }
+			  .navbar-nav li a:hover {
+				  color: #fff !important;
+			  }
+			  .navbar-nav li.active a {
+				  color: #fff !important;
+				  background-color: #29292c !important;
+			  }
+			  .navbar-default .navbar-toggle {
+				  border-color: transparent;
+			  }
+			  .fav_title
+			  {
+				color:#ddd;
+				font-size:25px;	
+				text-align:center;
+			  }
+			  .opacity_lib
+			  {
+				opacity:0.3;
+			  }
+				.fa-times-circle-o
+				{
+					line-height: 24px;
+				}
+				.each_fav
+				{
+					line-height: 24px;
+					border: 1px solid #ddd;
+				}			  
+				/****** Style Star Rating Widget *****/
+				.rating { 
+					border: none;
+					float: left;
+				}
+
+				.rating > input { display: none; } 
+				.rating > label:before { 
+				  margin: 5px;
+				  font-size: 1.25em;
+				  font-family: FontAwesome;
+				  display: inline-block;
+				  content: "\f005";
+				}
+
+				.rating > .half:before { 
+				  content: "\f089";
+				  position: absolute;
+				}
+
+				.rating > label { 
+				  color: #ddd; 
+				 float: right; 
+				}
+
+				/***** CSS Magic to Highlight Stars on Hover *****/
+
+				.rating > input:checked ~ label, /* show gold star when clicked */
+				.rating:not(:checked) > label:hover, /* hover current star */
+				.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+				.rating > input:checked + label:hover, /* hover current star when changing rating */
+				.rating > input:checked ~ label:hover,
+				.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+				.rating > input:checked ~ label:hover ~ label { color: #5cb85c;  } 
+		</style>
+	</head>
+	<body>
+			<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			  </button>
+			  <a class="navbar-brand" href="#">Movies App</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#" id="mov_btn">Movie Details</a></li>
+				<li><a href="#" id="lib_btn">Library</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+	<div class="container">
+		<div class="row ip_search_btn" id="top_row">
+		   <div class="col-md-8 col-lg-8 col-sm-8 "><input type="text" placeholder="Search movie...." class="form-control" id="mov_ip"></div>
+		   <div class="col-md-4 col-lg-4 col-sm-4"><button class="btn btn-success form-control" id="search"><i class="fa fa-search" aria-hidden="true"></i></button></div>
+		   <div class=""></div>
+		</div><!--for search-->
+		<div class="row" id="searched_movie">
+			
+				
+		</div><!--for libtrary-->
+		<div class="row" id="Library">
+			<div class="col-md-4 col-sm-4 col-lg-4" id="fav_library">
+			</div>	
+			<div class="col-md-8">
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
