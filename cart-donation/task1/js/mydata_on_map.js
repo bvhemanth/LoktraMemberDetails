@@ -970,7 +970,7 @@ function overMapButtons()
 		var angle2 = north - south;
 		if (angle2 > angle) angle = angle2;
 		var zoomfactor = Math.round(Math.log( 600 * 360 / angle / GLOBE_WIDTH) / Math.LN2);
-		this.setZoom(zoomfactor-1);
+		this.setZoom(zoomfactor+1);
 	});
 }
 //end placing overMapButtons
@@ -1035,7 +1035,7 @@ function memberDetails_place_all_things()
 				"status": "ONLINE",
 				"battery": 13.0,
 				"shift": "ON",
-				"last_activity": "2017-05-11T18:17:33.452000Z",
+				"last_activity": "2017-06T18:17:33.452000Z",
 				"total_working_hours": 16486.0,
 				"gps": "ON"
 			},
@@ -1064,7 +1064,7 @@ function memberDetails_place_all_things()
 			"task_location": null,
 			"id": "828ef1fa-4230-4ee6-9ae9-702429272b9f"
 		}],
-		"location_polylines": ["gajsAqsp`NzgAq`@ngOdqJa}bCk_eFd}vCjfoC??j_~BreW"],
+		"location_polylines": ["gajsAqsp`NzgAq`@ngOdqJa}bCk_eFd}vCjfoC??j_~BreWqlBz`cHvn@nwBovAmuO"],
 		"marker_data": [ {
 			"location_coordinates": [13.81924,78.89737],
 			"location_timestamp": "2002-05-11T14:25:37.000000Z",
@@ -1086,14 +1086,17 @@ function memberDetails_place_all_things()
 			"location_timestamp": "2010-05-11T14:27:08.000000Z",
 			"marker_type": "NORMAL"
 		}, {
-			"location_coordinates": [13.62188,79.28271],
+			"location_coordinates": [13.62162,79.29025],
 			"location_timestamp": "2014-05-11T14:29:08.000000Z",
 			"marker_type": "NORMAL"
 		}, {
 			"location_coordinates": [12.97158,79.15877],
 			"location_timestamp": "2017-05-11T14:32:16.646000Z",
 			"marker_type": "NORMAL"
-		}]
+		},
+		{"location_coordinates": [12.98911,77.66343], "location_timestamp": "2016-04-03T13:35:21.600000Z", "marker_type": "STAY POINT", "stay_duration": {"shift_on_duration": "Aug 15", "start_time": "2015-07-03T08:33:38.700000Z", "end_time": "2016-04-03T13:35:21.600000Z", "shift_off_duration": "Apr 2016"}},
+		{"location_coordinates": [12.98147,77.64415], "location_timestamp": "2017-03-03T13:35:21.600000Z", "marker_type": "STAY POINT", "stay_duration": {"shift_on_duration": "Jun 16", "start_time": "2016-07-03T08:33:38.700000Z", "end_time": "2017-03-03T13:35:21.600000Z", "shift_off_duration": "Mar 2017"}},
+		{"location_coordinates": [12.99547,77.72966], "location_timestamp": "2017-03-03T13:35:21.600000Z", "marker_type": "STAY POINT", "stay_duration": {"shift_on_duration": "Mar 17", "start_time": "2017-03-03T08:33:38.700000Z", "end_time": "2017-04-03T13:35:21.600000Z", "shift_off_duration": "Present"}}]
 	},
 	"members": [{
 		"status": "ONLINE",
@@ -2718,413 +2721,9 @@ function memberDetails_place_all_things()
 			}
 		},
 		"navigation": [{
-			"departments_tree": [{
-				"self": {
-					"id": "0686cea4-028b-4c1f-8b72-9d12812f9348",
-					"name": "Test 123"
-				},
-				"parent": {
-					"id": "1a667a07-7bb2-42c1-967f-95fbd7608b1e",
-					"name": "Test Group"
-				}
+			"departments_tree": []
 			}, {
-				"self": {
-					"id": "beba7efc-7d4a-44a9-b7a7-50d57528b0f3",
-					"name": "t11"
-				},
-				"parent": {
-					"id": "92af16be-edd8-4e38-a8f4-aa9b8e96b0b5",
-					"name": "dsdsd"
-				}
-			}, {
-				"self": {
-					"id": "dbc0f99b-4f85-429b-aec5-799a30e33cb7",
-					"name": "test"
-				},
-				"parent": {
-					"id": "b9439a5c-2b13-4acf-87d9-62c86368a286",
-					"name": "Design"
-				}
-			}, {
-				"self": {
-					"id": "92af16be-edd8-4e38-a8f4-aa9b8e96b0b5",
-					"name": "dsdsd"
-				},
-				"parent": {
-					"id": "1a667a07-7bb2-42c1-967f-95fbd7608b1e",
-					"name": "Test Group"
-				}
-			}, {
-				"self": {
-					"id": "a46173e4-dbdf-431d-a762-95962ad99aee",
-					"name": "new"
-				},
-				"parent": {
-					"id": "92af16be-edd8-4e38-a8f4-aa9b8e96b0b5",
-					"name": "dsdsd"
-				}
-			}, {
-				"self": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				},
-				"parent": {
-					"id": "8b69b9e4-928f-4edb-b19c-3214f93a7586",
-					"name": "All"
-				}
-			}, {
-				"self": {
-					"id": "b9439a5c-2b13-4acf-87d9-62c86368a286",
-					"name": "Design"
-				},
-				"parent": {
-					"id": "8b69b9e4-928f-4edb-b19c-3214f93a7586",
-					"name": "All"
-				}
-			}, {
-				"self": {
-					"id": "475bb6e0-d066-4304-bdfd-9b9a40831732",
-					"name": "test3"
-				},
-				"parent": {
-					"id": "b9439a5c-2b13-4acf-87d9-62c86368a286",
-					"name": "Design"
-				}
-			}, {
-				"self": {
-					"id": "8b69b9e4-928f-4edb-b19c-3214f93a7586",
-					"name": "All"
-				},
-				"parent": null
-			}, {
-				"self": {
-					"id": "9b2dc197-8fb9-4725-bdff-bb05238972b2",
-					"name": "test2"
-				},
-				"parent": {
-					"id": "b9439a5c-2b13-4acf-87d9-62c86368a286",
-					"name": "Design"
-				}
-			}, {
-				"self": {
-					"id": "26663257-a545-49d0-979c-cacd814608f5",
-					"name": "Backend"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}, {
-				"self": {
-					"id": "1a667a07-7bb2-42c1-967f-95fbd7608b1e",
-					"name": "Test Group"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}, {
-				"self": {
-					"id": "16386e5d-37bf-4591-8517-52dccb0fda7c",
-					"name": "Android"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}, {
-				"self": {
-					"id": "52826cfa-f07f-4a77-bf35-aa8c85db15a2",
-					"name": "Frontend"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}, {
-				"self": {
-					"id": "7175bade-f21f-4e67-a335-52c1a321f5f9",
-					"name": "Design - Engg"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}],
-			"regions_tree": [{
-				"self": {
-					"id": "43bcf8e3-bcaa-4df3-af7b-bdab6bdb525b",
-					"name": "Gujarat"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				},
-				"parent": null
-			}, {
-				"self": {
-					"id": "7b48c2a9-bab8-4649-a2a9-3d060623f3a8",
-					"name": "Maharashtra"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "9639c59e-fc22-4cda-9762-125851680077",
-					"name": "Delhi & NCR"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "a899f879-a847-42e4-8de7-47b47f3612ad",
-					"name": "MP"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "617f60f5-91f6-4dd1-85b8-892560ba2142",
-					"name": "Andhra Pradesh"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "0e986142-a22e-45ea-8012-1662eccf38be",
-					"name": "rajasthan"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "8cb6d297-083f-4216-afb2-366a06668f72",
-					"name": "Bengaluru"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}]
-		}, {
-			"departments_tree": [{
-				"self": {
-					"id": "0686cea4-028b-4c1f-8b72-9d12812f9348",
-					"name": "Test 123"
-				},
-				"parent": {
-					"id": "1a667a07-7bb2-42c1-967f-95fbd7608b1e",
-					"name": "Test Group"
-				}
-			}, {
-				"self": {
-					"id": "beba7efc-7d4a-44a9-b7a7-50d57528b0f3",
-					"name": "t11"
-				},
-				"parent": {
-					"id": "92af16be-edd8-4e38-a8f4-aa9b8e96b0b5",
-					"name": "dsdsd"
-				}
-			}, {
-				"self": {
-					"id": "dbc0f99b-4f85-429b-aec5-799a30e33cb7",
-					"name": "test"
-				},
-				"parent": {
-					"id": "b9439a5c-2b13-4acf-87d9-62c86368a286",
-					"name": "Design"
-				}
-			}, {
-				"self": {
-					"id": "92af16be-edd8-4e38-a8f4-aa9b8e96b0b5",
-					"name": "dsdsd"
-				},
-				"parent": {
-					"id": "1a667a07-7bb2-42c1-967f-95fbd7608b1e",
-					"name": "Test Group"
-				}
-			}, {
-				"self": {
-					"id": "a46173e4-dbdf-431d-a762-95962ad99aee",
-					"name": "new"
-				},
-				"parent": {
-					"id": "92af16be-edd8-4e38-a8f4-aa9b8e96b0b5",
-					"name": "dsdsd"
-				}
-			}, {
-				"self": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				},
-				"parent": {
-					"id": "8b69b9e4-928f-4edb-b19c-3214f93a7586",
-					"name": "All"
-				}
-			}, {
-				"self": {
-					"id": "b9439a5c-2b13-4acf-87d9-62c86368a286",
-					"name": "Design"
-				},
-				"parent": {
-					"id": "8b69b9e4-928f-4edb-b19c-3214f93a7586",
-					"name": "All"
-				}
-			}, {
-				"self": {
-					"id": "475bb6e0-d066-4304-bdfd-9b9a40831732",
-					"name": "test3"
-				},
-				"parent": {
-					"id": "b9439a5c-2b13-4acf-87d9-62c86368a286",
-					"name": "Design"
-				}
-			}, {
-				"self": {
-					"id": "8b69b9e4-928f-4edb-b19c-3214f93a7586",
-					"name": "All"
-				},
-				"parent": null
-			}, {
-				"self": {
-					"id": "9b2dc197-8fb9-4725-bdff-bb05238972b2",
-					"name": "test2"
-				},
-				"parent": {
-					"id": "b9439a5c-2b13-4acf-87d9-62c86368a286",
-					"name": "Design"
-				}
-			}, {
-				"self": {
-					"id": "26663257-a545-49d0-979c-cacd814608f5",
-					"name": "Backend"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}, {
-				"self": {
-					"id": "1a667a07-7bb2-42c1-967f-95fbd7608b1e",
-					"name": "Test Group"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}, {
-				"self": {
-					"id": "16386e5d-37bf-4591-8517-52dccb0fda7c",
-					"name": "Android"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}, {
-				"self": {
-					"id": "52826cfa-f07f-4a77-bf35-aa8c85db15a2",
-					"name": "Frontend"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}, {
-				"self": {
-					"id": "7175bade-f21f-4e67-a335-52c1a321f5f9",
-					"name": "Design - Engg"
-				},
-				"parent": {
-					"id": "8b3c4a18-62c3-4d31-9155-917b1fb66e9e",
-					"name": "Engineering"
-				}
-			}],
-			"regions_tree": [{
-				"self": {
-					"id": "43bcf8e3-bcaa-4df3-af7b-bdab6bdb525b",
-					"name": "Gujarat"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				},
-				"parent": null
-			}, {
-				"self": {
-					"id": "7b48c2a9-bab8-4649-a2a9-3d060623f3a8",
-					"name": "Maharashtra"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "9639c59e-fc22-4cda-9762-125851680077",
-					"name": "Delhi & NCR"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "a899f879-a847-42e4-8de7-47b47f3612ad",
-					"name": "MP"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "617f60f5-91f6-4dd1-85b8-892560ba2142",
-					"name": "Andhra Pradesh"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "0e986142-a22e-45ea-8012-1662eccf38be",
-					"name": "rajasthan"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}, {
-				"self": {
-					"id": "8cb6d297-083f-4216-afb2-366a06668f72",
-					"name": "Bengaluru"
-				},
-				"parent": {
-					"id": "b61ea708-b6cb-49dd-a280-b1513442a2a6",
-					"name": "PAN India"
-				}
-			}]
+			"departments_tree": []
 		}],
 		"roles": [{
 			"role_name": "admin",
@@ -3432,8 +3031,8 @@ function memberDetails_place_all_things()
 	}
 
 	//statpoints_array=main_data.member_details.task_details
-	decodeForGeometry(encodedStr);
-	//decodePolyline(encodedStr);
+	//decodeForGeometry(encodedStr);
+	decodePolyline(encodedStr);
 	markersPlotting();
 
 	
